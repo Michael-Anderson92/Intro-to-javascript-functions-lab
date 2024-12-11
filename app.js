@@ -59,10 +59,11 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (character) => {
-  if (character === 'a') || (character === 'e') || (character === 'i') || (character === 'o') || (character === 'u') {
+  if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
     return true;
 } else {
   return false;
+}
 }
 
 
@@ -82,6 +83,10 @@ Complete the exercise in the space below:
 */
 
 
+const generateEmail = (username, domain) => {
+  return `${username}@${domain}`
+}
+
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
@@ -98,7 +103,9 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-
+const greetUser = (user, timeOfDay) => {
+  return `Good ${timeOfDay}, ${user}`
+}
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
 
@@ -115,6 +122,14 @@ Complete the exercise in the space below:
 */
 
 
+const maxOfThree = (num1, num2, num3) => {
+  if (num1 > num2 && num1 > num3) {
+    return num1;
+  } else if (num2 > num1 && num2 > num3) {
+      return num2;
+  } else if (num3 > num1 && num3 > num2)
+      return num3;
+  }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
@@ -131,7 +146,10 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-
+const calculateTip = (billAmount, tipPercentage) => {
+  let tipAmount = billAmount * (tipPercentage / 100);
+  return tipAmount;
+}
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
@@ -150,9 +168,18 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
+const convertTemperature = (temperature, scale) => {
+  if (scale === 'C') {
+    let sum = 9 / 5 * temperature + 32; 
+    return sum;
 
+  } else if (scale === 'F') {
+    let sum = (temperature - 32) * 1.8;
+    return sum;
+  }
+}
 
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+console.log('Exercise 8 Result:', convertTemperature(32, 'F'));
 
 
 /*
@@ -171,6 +198,18 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-
+const basicCalculator = (num1, num2, operand) => {
+if (operand === 'subtract') {
+  return num1 - num2;
+} else if (operand === 'add') {
+  return num1 + num2;
+} else if (operand === 'multiply') {
+  return num1 * num2;
+} else if (operand === 'divide') {
+  return num1 / num2;
+} else {
+  return 'Not a valid operand'
+}
+}
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
