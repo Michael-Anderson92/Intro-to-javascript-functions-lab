@@ -31,8 +31,18 @@ Complete the exercise in the space below:
 */
 
 
+const isAdult = (number) => {
+  if (number >= 18) {
+    return 'Adult';
+  } else {
+    return 'Minor';
+  }
+}
 
-console.log('Exercise 2 Result:', isAdult(21));
+
+
+
+console.log('Exercise 2 Result:', isAdult(18));
 
 
 /*
@@ -48,6 +58,12 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
+const isCharAVowel = (character) => {
+  if (character === 'a') || (character === 'e') || (character === 'i') || (character === 'o') || (character === 'u') {
+    return true;
+} else {
+  return false;
+}
 
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
